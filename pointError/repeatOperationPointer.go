@@ -14,6 +14,7 @@ func NewSchool() *School {
 	return this
 }
 
+
 type Student struct {
 	Id   int
 	Name string
