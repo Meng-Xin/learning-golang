@@ -39,7 +39,9 @@ func main() {
 		}
 
 	}
-	// 给 9 个 学生分配Id
+
+	// 给 9 个学生设置id
+
 	for i := 0; i < len(school.StudentManage); i++ {
 		school.StudentManage[i].Id = i
 	}
