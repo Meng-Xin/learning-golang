@@ -7,7 +7,7 @@ type IAnimal interface {
 }
 
 func Accomplish(i IAnimal) {
-	fmt.Println(i.Barking)
+	fmt.Println(i.Barking())
 }
 
 type Dog struct {
@@ -15,8 +15,10 @@ type Dog struct {
 }
 
 func (d *Dog) Barking() string {
+	var bark string
 	d.Name = "小狗:"
-	return d.Name + "汪汪汪"
+	bark = d.Name + "汪汪汪"
+	return bark
 }
 
 type Cat struct {
@@ -24,8 +26,10 @@ type Cat struct {
 }
 
 func (c *Cat) Barking() string {
+	var bark string
 	c.Name = "小猫:"
-	return c.Name + "喵喵喵"
+	bark = c.Name + "喵喵喵"
+	return bark
 }
 
 type Duck struct {
@@ -33,8 +37,10 @@ type Duck struct {
 }
 
 func (d *Duck) Barking() string {
+	var bark string
 	d.Name = "小鸭:"
-	return d.Name + "嘎嘎嘎"
+	bark = d.Name + "嘎嘎嘎"
+	return bark
 }
 
 func main() {
@@ -51,5 +57,4 @@ func main() {
 		duck := new(Duck)
 		Accomplish(duck)
 	}
-
 }
