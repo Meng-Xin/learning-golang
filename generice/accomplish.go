@@ -6,6 +6,7 @@ type IAnimal interface {
 	Barking() string
 }
 
+// Accomplish 这里使用了回调函数特性
 func Accomplish(i IAnimal) {
 	fmt.Println(i.Barking())
 }
